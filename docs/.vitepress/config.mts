@@ -1,10 +1,10 @@
 import { defineConfig } from 'vitepress'
-const base = '/learn-go/'
+// const base = '/learn-go/'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base,
+  // base,
   lang: 'zh-Hans',
-  head: [['link', { rel: 'icon', href: `${base}favicon.png` }]],
+  head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   title: 'Go 语言开发学习路线',
   description: 'Go 语言开发学习路线',
   cleanUrls: true,
