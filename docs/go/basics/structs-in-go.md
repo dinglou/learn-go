@@ -284,4 +284,4 @@ func main() {
 
 ### 多态
 
-在 Go 语言中，多态是通过[接口](/go/basics/interfaces-in-go.html)来实现的。
+在 Go 语言中，多态是通过[接口](/go/basics/interfaces-in-go)来实现的。

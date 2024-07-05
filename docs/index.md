@@ -13,8 +13,8 @@ hero:
       text: 立即开始
       link: /go/basics/why-learn-go
     - theme: alt
-      text: Go 中级
-      link: /go/intermediate/custom-types-in-go
+      text: GitHub
+      link: https://github.com/dinglou/learn-go
 
 features:
   - title: 什么是 Go 语言？

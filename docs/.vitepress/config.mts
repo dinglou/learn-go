@@ -3,22 +3,36 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // base,
-  lang: 'zh-Hans',
+  lang: 'zh',
   head: [['link', { rel: 'icon', href: '/favicon.png' }]],
   title: 'Go 语言开发学习路线',
-  description: 'Go 语言开发学习路线',
+  titleTemplate: ':title - Go 语言开发学习路线',
+  description: 'Go 语言开发学习路线，Go 开发逐步指南，一步步带你走进 Go 的世界。好记性不如烂笔头，一步一个脚印。',
   cleanUrls: true,
+
+  sitemap: {
+    hostname: 'https://go.aboss.top',
+  },
+
   markdown: {
     lineNumbers: true,
     image: { lazyLoading: true },
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息',
+    },
   },
+
   themeConfig: {
     logo: '/favicon.png',
 
     nav: [
-      { text: '首页', link: '/' },
-      { text: '基础', link: '/go/basics/why-learn-go' },
-      { text: '中级', link: '/go/intermediate/custom-types-in-go' },
+      { text: '🏠 首页', link: '/' },
+      { text: '💯 基础', link: '/go/basics/why-learn-go' },
+      { text: '💪 中级', link: '/go/intermediate/custom-types-in-go' },
       // {
       //   text: '高级',
       //   items: [
@@ -32,7 +46,7 @@ export default defineConfig({
       //     },
       //   ],
       // },
-      { text: '团队', link: '/go/team/' },
+      { text: '😏 团队', link: '/go/team/' },
     ],
 
     search: {
@@ -55,7 +69,12 @@ export default defineConfig({
       },
     },
 
+    darkModeSwitchTitle: '切换到深色模式',
+    lightModeSwitchTitle: '切换到浅色模式',
+
     socialLinks: [{ icon: 'github', link: 'https://github.com/dinglou/learn-go' }],
+
+    externalLinkIcon: true,
 
     sidebar: {
       '/go/basics/': [
@@ -99,6 +118,7 @@ export default defineConfig({
             { text: '泛型', link: '/go/basics/generics-in-go' },
           ],
         },
+        { text: '👉 Go 中级', link: '/go/intermediate/' },
       ],
 
       '/go/intermediate/': [
@@ -131,14 +151,19 @@ export default defineConfig({
 
     outline: {
       level: [2, 4],
-      label: '目录',
+      label: '页面导航',
+    },
+
+    editLink: {
+      pattern: 'https://github.com/dinglou/learn-go/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面',
     },
 
     lastUpdated: {
-      text: '最后更新于:',
+      text: '最后更新于',
       formatOptions: {
-        dateStyle: 'full',
-        timeStyle: 'medium',
+        dateStyle: 'short',
+        timeStyle: 'short',
       },
     },
 

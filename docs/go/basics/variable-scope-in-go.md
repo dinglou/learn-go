@@ -1,6 +1,6 @@
 # 变量作用域
 
-一个[变量](/go/basics/variables-in-go.html)在程序中的作用范围，称为作用域。
+一个[变量](/go/basics/variables-in-go)在程序中的作用范围，称为作用域。
 
 Go 语言有两类变量：局部变量和全局变量。可以简单理解为：
 

@@ -26,7 +26,7 @@ func main() {
 
 ### 安装 Go 扩展工具
 
-如果 main.go 是在 [VS Code](/go/basics/install-vs-code-and-go-extension.html) 中打开的第一个 go 文件，系统可能会提示为 Go 扩展安装其他工具。出现提示时，请选择“安装所有”，然后等待安装完成即可。
+如果 main.go 是在 [VS Code](/go/basics/install-vs-code-and-go-extension) 中打开的第一个 go 文件，系统可能会提示为 Go 扩展安装其他工具。出现提示时，请选择“安装所有”，然后等待安装完成即可。
 
 如果安装失败，也可以选择手动安装。按快捷键：`Ctrl + Shift + p`或`F1`，输入：go，选择：Go: Install/Update Tools，勾选安装所有插件。
 
@@ -54,7 +54,7 @@ go run 命令会将文件编译到临时位置并从该位置运行文件。如�
 
 我们从 main.go 文件中的第一个语句开始，`package main`是包声明语句。
 
-[包](/go/basics/packages-and-modules-in-go.html)是 Go 组织代码的方式，是源文件的集合，一个包由一个或多个 .go 源文件组成。每个源文件必须先声明所属包，以一个 package 声明开始，表明文件属于哪个包。
+[包](/go/basics/packages-and-modules-in-go)是 Go 组织代码的方式，是源文件的集合，一个包由一个或多个 .go 源文件组成。每个源文件必须先声明所属包，以一个 package 声明开始，表明文件属于哪个包。
 
 main 包是一个特殊的包，因为它是可执行程序的入口包，且一个 Go 程序只能有一个 main 包。如果一个程序没有 main 包，那么编译时会出错，无法生成可执行文件。
 
@@ -64,7 +64,7 @@ main.go 文件中的下一行，`import "fmt"`语句用于导入程序中所依�
 
 ### main 函数
 
-`func main()`定义了 main 函数，func 关键字用于声明[函数](/go/basics/functions-in-go.html)，main 是函数名。
+`func main()`定义了 main 函数，func 关键字用于声明[函数](/go/basics/functions-in-go)，main 是函数名。
 
 main 函数是 Go 程序的入口函数，在程序运行时，它是第一个被执行的函数。main 函数只能声明在 main 包中，并且一个 main 包中有且仅有一个 main 函数。
 

@@ -1,6 +1,6 @@
 # 条件语句
 
-条件语句，是指根据条件（布尔表达式的值）执行相应的代码块，来实现更丰富的逻辑以及更强大的功能，如 if 语句、switch 语句、[select 语句](/go/intermediate/channels-in-go.html#select)。
+条件语句，是指根据条件（布尔表达式的值）执行相应的代码块，来实现更丰富的逻辑以及更强大的功能，如 if 语句、switch 语句、[select 语句](/go/intermediate/channels-in-go#select)。
 
 ## if 语句
 
@@ -51,7 +51,7 @@ func main() {
 }
 ```
 
-::: details 注意
+::: tip
 else if 没有数量限制，但在实际编程中，并不建议有过多的分支。
 :::
 

@@ -12,12 +12,12 @@ import {
 
 const coreMembers = [
   {
-    avatar: './assets/favicon.png',
+    avatar: '/favicon.png',
     name: '三毛笔记',
     title: '创建者',
     links: [
       { icon: 'github', link: 'https://github.com/dinglou/learn-go' },
-      // { icon: 'discord', link: 'https://twitter.com/youyuxi' },
+      // { icon: '🌐', link: 'https://aboss.top' },
       // { icon: 'discord', link: 'https://twitter.com/youyuxi' },
     ],
   },
@@ -34,12 +34,12 @@ const coreMembers = [
 
 const partners = [
   {
-    avatar: './assets/favicon.png',
+    avatar: '/favicon.png',
     name: '三毛笔记',
     title: '创建者',
     links: [
       { icon: 'github', link: 'https://github.com/dinglou/learn-go' },
-      // { icon: 'twitter', link: 'https://twitter.com/youyuxi' }
+      // { icon: '🌐', link: 'https://aboss.top' },
     ],
   },
   // {

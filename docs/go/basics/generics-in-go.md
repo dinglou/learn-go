@@ -1,3 +1,9 @@
+---
+next:
+  text: 'Go 中级'
+  link: '/go/intermediate/'
+---
+
 # 泛型
 
 **先决条件：需要 go1.18 或更高版本**。
