@@ -31,8 +31,8 @@ export default defineConfig({
 
     nav: [
       { text: '🏠 首页', link: '/' },
-      { text: '💯 基础', link: '/go/basics/why-learn-go' },
-      { text: '💪 中级', link: '/go/intermediate/custom-types-in-go' },
+      { text: '💯 基础', link: '/go/basics/why-learn-go', activeMatch: '/go/basics/' },
+      { text: '💪 中级', link: '/go/intermediate/custom-types-in-go', activeMatch: '/go/intermediate/' },
       // {
       //   text: '高级',
       //   items: [
@@ -54,7 +54,7 @@ export default defineConfig({
       options: {
         translations: {
           button: {
-            buttonText: '搜索',
+            buttonText: '输入关键字搜索，宁少字毋错字',
           },
           modal: {
             noResultsText: '没有找到结果',
@@ -83,7 +83,7 @@ export default defineConfig({
           items: [
             { text: '为什么要学习 Go 语言', link: '/go/basics/why-learn-go' },
             { text: '在 Windows 上安装 Go', link: '/go/basics/install-go-on-windows' },
-            { text: 'Go 环境变量设置', link: '/go/basics/environment-variables-in-go' },
+            { text: 'Go 环境变量', link: '/go/basics/environment-variables-in-go' },
             { text: '安装 VS Code 和 Go 扩展', link: '/go/basics/install-vs-code-and-go-extension' },
             { text: '第一个 Go 程序', link: '/go/basics/first-go-program' },
             { text: '打包生成可执行文件', link: '/go/basics/build-and-install-go-programs' },
@@ -99,7 +99,7 @@ export default defineConfig({
             { text: '条件语句', link: '/go/basics/conditional-statements-in-go' },
             { text: 'for 语句', link: '/go/basics/for-statements-in-go' },
             { text: '函数', link: '/go/basics/functions-in-go' },
-            { text: '变量作用域', link: '/go/basics/variable-scope-in-go' },
+            { text: '变量作用域', link: '/go/basics/scope-of-variables-in-go' },
             { text: '包和模块', link: '/go/basics/packages-and-modules-in-go' },
             { text: '多模块工作区', link: '/go/basics/multi-module-workspaces-in-go' },
           ],
@@ -132,12 +132,17 @@ export default defineConfig({
             { text: '并发', link: '/go/intermediate/concurrency-in-go' },
             { text: '互斥锁', link: '/go/intermediate/mutexes-in-go' },
             { text: '通道', link: '/go/intermediate/channels-in-go' },
+            { text: '反射', link: '/go/intermediate/reflection-in-go' },
+            { text: 'Go 测试', link: '/go/intermediate/tests-in-go' },
           ],
         },
-        // {
-        //   text: 'IO 操作',
-        //   items: [{ text: 'defer 语句', link: '/go/intermediate/defer-statements-in-go' }],
-        // },
+        {
+          text: '实战小案例',
+          items: [
+            { text: '猜谜游戏', link: '/go/intermediate/guessing-game' },
+            { text: '命令行字典', link: '/go/intermediate/simpledict' },
+          ],
+        },
         // {
         //   text: '反射机制',
         //   items: [{ text: '互斥锁', link: '/go/intermediate/mutexes-in-go' }],
@@ -156,7 +161,7 @@ export default defineConfig({
 
     editLink: {
       pattern: 'https://github.com/dinglou/learn-go/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面',
+      text: '不妥之处，敬请雅正',
     },
 
     lastUpdated: {

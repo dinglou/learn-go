@@ -1,14 +1,14 @@
 # 安装 VS Code 和 Go 扩展
 
-虽然，你可以使用任何文本编辑器来编写 Go 应用程序。但是，使用 VS Code 等集成开发环境（IDE，Integrated Development Environment ）将有助于你更快地编写代码，使用 IDE，你无需从头开始编写每一行代码。
+虽然，可以使用任何文本编辑器来编写 Go 应用程序。但是，使用 VS Code 等集成开发环境（IDE，Integrated Development Environment ）有助于更快地编写代码，使用 IDE，无需从头开始编写每一行代码。
 
-虽然在学习编程语言初期，逐行编写有助于熟悉语法。但从长远来看，手动编写代码需要更长的时间来生成应用程序。
+在学习编程语言初期，虽然逐行编写代码有助于熟悉语法。但从长远来看，手动编写代码需要更长的时间来生成应用程序。
 
-因此，建议一开始就使用 VS Code，它是免费的开放源代码工具，并提供 Go 扩展来帮助你快速编写代码。
+因此，建议一开始就使用 VS Code，它是免费的开放源代码工具，并提供 Go 扩展来快速编写代码。
 
 ## 安装 VS Code
 
-到官网下载：https://code.visualstudio.com/download
+到官网下载并安装：https://code.visualstudio.com/download
 
 ## 安装 Chinese 扩展
 
@@ -24,4 +24,4 @@
 
 ## 安装 Go 扩展
 
-搜索选择“Google Go 团队”发布的“Go”扩展进行安装。
+搜索选择“Google Go 团队”发布的“Go”扩展进行安装。Go 扩展提供语法高亮、代码格式化、自动错误检查等功能。

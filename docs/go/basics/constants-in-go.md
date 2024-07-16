@@ -45,9 +45,9 @@ func main() {
 
 ## 预定义常量 iota
 
-Go 语言中预定义常量 iota，是一个可被编译器修改的常量：
+Go 中的预定义常量 iota，是一个可被编译器修改的常量：
 
-- iota 在 const 关键字出现时将被重置为 0
+- iota 在 const 关键字出现时被重置为 0
 - const 中每新增一行常量声明将使 iota 计数一次，iota 可理解为 const 语句块中的行索引
 
 ```go

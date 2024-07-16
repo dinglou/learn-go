@@ -201,7 +201,7 @@ func main() {
 
 ### 字符串拼接
 
-最简单的方法是使用 + 操作符。
+最简单的方法是使用 + 操作符，性能较低（每次会重新分配内存）。
 
 ```go
 func main() {
@@ -215,7 +215,7 @@ func main() {
 }
 ```
 
-当有大量的字符串需要拼接时，使用 strings.Builder 效率会更高。
+当有大量的字符串需要拼接时，使用 strings.Builder 效率会更高（底层是字节数组 []byte，不需要每次拼接都重新分配内存）。
 
 ```go
 func main() {
@@ -265,3 +265,5 @@ func main() {
 子串出现位置：strings.Index，strings.LastIndex
 
 拼接：strings.Join
+
+重复：strings.Repeat

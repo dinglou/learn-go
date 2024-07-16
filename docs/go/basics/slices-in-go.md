@@ -1,6 +1,16 @@
 # 切片
 
-切片是一个动态[数组](/go/basics/arrays-in-go)（对数组的引用，即数组的视图），因为数组长度是固定的，所以操作起来很不方便。在开发中数组并不常用，切片才是大量使用的。
+Slices，中文翻译为“切片”，在 Go 中不是[数组](/go/basics/arrays-in-go)，而是一个[结构体](/go/basics/structs-in-go)，其定义（runtime 包下的 slice.go）如下：
+
+```go
+type slice struct {
+	array unsafe.Pointer // 指向数组起始地址的指针
+	len   int            // length 数组长度
+	cap   int            // capacity 数组容量
+}
+```
+
+切片可看成是动态数组，是对数组的引用，即数组的视图。因为数组长度是固定的，所以操作起来很不方便，在开发中数组并不常用，切片才是大量使用的。
 
 ## 声明
 
@@ -15,13 +25,11 @@ func main() {
 }
 ```
 
-切片存 3 个值：数组起始地址 长度 容量。len 代表长度 length，cap 代表容量 capacity。
-
 如果一个切片没有被显式初始化，其值会是 nil。
 
 ## 初始化
 
-方式一：
+方式一，使用字面量初始化：
 
 ```go
 func main() {
@@ -32,7 +40,7 @@ func main() {
 }
 ```
 
-方式二，从数组或切片上获得切片：
+方式二，从数组或切片上获得切片，使用的是半开区间：
 
 ```go
 func main() {
@@ -41,6 +49,8 @@ func main() {
 	fmt.Println(s, len(s), cap(s)) // [23 24 25 26 27] 长度5 容量5
 	s2 := s[1:3]
 	fmt.Println(s2, len(s2), cap(s2)) // [24 25] 长度2 容量4
+	s3 := s[1:3:4]
+	fmt.Println(s3, len(s3), cap(s3)) // [24 25] 长度2 容量3
 }
 ```
 

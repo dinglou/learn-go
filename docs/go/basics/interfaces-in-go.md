@@ -13,6 +13,8 @@ type Usb interface {
 }
 ```
 
+接口名称通常以 er 结尾，如 Usber。
+
 ### 接口参数
 
 ```go

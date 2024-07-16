@@ -59,4 +59,6 @@ go.work 文件具有与 go.mod 类似的语法（go.work 优先级高于 go.mod�
 
 切换到 hello 目录：`cd hello`，运行：`go run .`，输出：`olleH`。
 
-> 注意：实际项目中，多个模块之间可能还依赖其他模块，建议在 go.work 所在目录执行`go work sync`。
+::: tip 注意
+实际项目中，多个模块之间可能还依赖其他模块，建议在 go.work 所在目录执行`go work sync`。
+:::

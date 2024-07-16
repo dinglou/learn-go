@@ -71,27 +71,36 @@ func main() {
 
 ## 缓冲
 
-### 无缓冲通道
+只要通道容量大于零，那么该通道就是**有缓冲通道**，通道容量表示通道中能存放元素的数量。
 
-使用无缓冲通道进行通信将导致发送和接收的 goroutine 同步化。因此，无缓冲通道也被称为同步通道。
+**无缓冲通道**也被称为同步通道，使用无缓冲通道进行通信将导致发送和接收的 goroutine 同步化。
 
 ```go
-func recv(c chan int) {
-  ret := <-c // 接收数据
-  fmt.Println("recv:", ret)
-}
-
 func main() {
-  ch := make(chan int)
-  go recv(ch) // 启用goroutine从管道接收数据
-  ch <- 100   // 向管道发送数据
-  fmt.Println("main: send 100 to channel")
+	src := make(chan int)
+	dst := make(chan int, 3)
+	// 子协程发送数字 0-9
+	go func() {
+		defer close(src)
+		for i := 0; i < 10; i++ {
+			src <- i
+		}
+	}()
+
+	// 子协程计算输入数字的平方
+	go func() {
+		defer close(dst)
+		for i := range src {
+			dst <- i * i
+		}
+	}()
+
+	// 主协程输出最后的平方数
+	for i := range dst {
+		println(i)
+	}
 }
 ```
-
-### 有缓冲通道
-
-只要通道容量大于零，那么该通道就是有缓冲通道，通道容量表示通道中能存放元素的数量。
 
 ## 遍历通道
 
